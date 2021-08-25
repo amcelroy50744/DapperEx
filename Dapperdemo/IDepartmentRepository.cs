@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Dapperdemo
 {
-    interface IDepartmentRepository
+    public interface IDepartmentRepository
     {
+        IEnumerable<Department> GetAllDepartments();
     }
 }
