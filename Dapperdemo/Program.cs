@@ -31,6 +31,16 @@ namespace Dapperdemo
                 Console.WriteLine($"{department.DepartmentID} {department.Name}");
             }
 
+            IDbConnection connection = new MySqlConnection(connString);
+            var repos = new DapperProductRepository(connection);
+
+            var products = repos.GetAllProducts();
+
+            foreach(var product in products) 
+            {
+                Console.WriteLine($"{product.CategoryID}{product.Name}");
+            }
+
 
             
         }

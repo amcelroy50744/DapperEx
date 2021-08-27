@@ -15,7 +15,7 @@ namespace Dapperdemo
         }
         public IEnumerable<Department> GetAllDepartments() 
         {
-          return  _connection.Query<Department>("Select * From departmetns");
+          return  _connection.Query<Department>("Select * From departments");
         }
     }
 }
